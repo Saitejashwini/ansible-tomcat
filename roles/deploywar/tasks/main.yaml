@@ -2,7 +2,7 @@
 # Simple GET operation
 - name: Get the artifact from S3 bucket
   aws_s3: 
-    bucket: {{ BUCKET_NAME }} 
+    bucket: "{{ BUCKET_NAME }}"
     object: /81f8102d-c371-4991-bf51-669d3e2d903b/petclinic/petclinic.war
     dest: "{{ TOMCAT_HOME }}/webapps/petclinic.war" 
     mode: get
