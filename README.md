@@ -1,5 +1,6 @@
 # ansible-tomcat
 
+# Install ansible in Amazon Linux2
 sudo amazon-linux-extras install ansible2
 
 # Set environment variables
