@@ -4,11 +4,11 @@
 sudo amazon-linux-extras install ansible2
 
 ### Set environment variables
-export AWS_ACCESS_KEY_ID='<AWS ACCESS KEY>'
+export AWS_ACCESS_KEY_ID='<AWS ACCESS KEY>' \n
 export AWS_SECRET_ACCESS_KEY='<AWS SECRET ACCESS KEY>'
 
 ### List of aws ec2 instances in groups
-ansible-inventory -i aws_ec2.yml --graph
+ansible-inventory -i aws_ec2.yml --graph \n
 ansible-inventory -i aws_ec2.yml --list
 
 ### Execute ansible playbook to install, configure and deploy tomcat and war file 
