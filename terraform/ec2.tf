@@ -69,8 +69,8 @@ resource "aws_autoscaling_group" "example" {
   target_group_arns    = ["${aws_lb_target_group.my-target-group.arn}"]
   health_check_type    = "EC2"
 
-  min_size = 2
-  max_size = 3
+  min_size = 1
+  max_size = 2
 
   tag {
     key                 = "Name"
