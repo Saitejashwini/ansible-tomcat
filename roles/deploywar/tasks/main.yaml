@@ -1,8 +1,18 @@
 ---
-# Simple GET operation
+- name: Install pip
+  yum:
+    name: python-pip
+    state: latest
+    update_cache: yes
+
+- name: Install boto3
+  pip:
+    name: boto3
+    
 - name: Get the artifact from S3 bucket
-  s3: 
-    bucket: {{ BUCKET_NAME }} 
+  aws_s3: 
+    bucket: "{{ BUCKET_NAME }}"
     object: /81f8102d-c371-4991-bf51-669d3e2d903b/petclinic/petclinic.war
     dest: "{{ TOMCAT_HOME }}/webapps/petclinic.war" 
     mode: get
+    overwrite: different
