@@ -18,11 +18,15 @@
 
 ### change to terraform directory
 cd terraform
+
 ### Initialize terraform (download's provider [AWS] packages)
 terraform init
  
 ### Create the terraform plan
 terraform plan
  
-### Create the resources, type yes when prompted (creates a VPC named myvpc in AWS)
+### Create the resources, type yes when prompted
 terraform apply
+
+### Create the resources, without prompting
+terraform apply --auto-approve
